@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PlanetarySystem;
-using Ul4;
 
 namespace UL4
 {

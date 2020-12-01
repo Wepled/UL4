@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using UL4;
 
-namespace PlanetarySystem
+namespace UL4
 {
     public class Planet : PrPoint
     {
