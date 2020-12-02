@@ -19,7 +19,7 @@ namespace UL4
         public void Draw(Graphics graphics)
         {
             Pen pen = new Pen(Color.Green);
-            SolidBrush sb = new SolidBrush(Color.Blue);
+            SolidBrush sb = new SolidBrush(Color.Aquamarine);
             graphics.DrawEllipse(pen, (int)GetX(), (int)GetY(), _planetRadius, _planetRadius);
             graphics.FillEllipse(sb, (int)GetX(), (int)GetY(), _planetRadius, _planetRadius);
         }

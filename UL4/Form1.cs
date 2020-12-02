@@ -16,15 +16,12 @@ namespace UL4
         {
             InitializeComponent();
             startStop.Text = "Start";
-
+            planetSystem = new PSController((double) this.Width / 3, (double) this.Height / 2);
 
         }
 
-        PSController planetSystem = new PSController();
-
-
+        PSController planetSystem;
         Graphics graphics;
-
 
         private void DrawPlanetsSYS(PSController PS)
         {

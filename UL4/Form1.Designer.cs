@@ -44,9 +44,10 @@ namespace UL4
             // 
             // moveOnce
             // 
-            this.moveOnce.Location = new System.Drawing.Point(1077, 12);
+            this.moveOnce.Location = new System.Drawing.Point(1077, 10);
+            this.moveOnce.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.moveOnce.Name = "moveOnce";
-            this.moveOnce.Size = new System.Drawing.Size(156, 39);
+            this.moveOnce.Size = new System.Drawing.Size(156, 31);
             this.moveOnce.TabIndex = 1;
             this.moveOnce.Text = "Move once";
             this.moveOnce.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@ namespace UL4
             // 
             // startStop
             // 
-            this.startStop.Location = new System.Drawing.Point(1077, 81);
+            this.startStop.Location = new System.Drawing.Point(12, 11);
+            this.startStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startStop.Name = "startStop";
-            this.startStop.Size = new System.Drawing.Size(156, 42);
+            this.startStop.Size = new System.Drawing.Size(156, 34);
             this.startStop.TabIndex = 2;
             this.startStop.Text = "Start/Stop";
             this.startStop.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@ namespace UL4
             // 
             // Close
             // 
-            this.Close.Location = new System.Drawing.Point(1077, 768);
+            this.Close.Location = new System.Drawing.Point(1077, 614);
+            this.Close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(156, 44);
+            this.Close.Size = new System.Drawing.Size(156, 35);
             this.Close.TabIndex = 3;
             this.Close.Text = "Close";
             this.Close.UseVisualStyleBackColor = true;
@@ -74,12 +77,13 @@ namespace UL4
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 823);
+            this.ClientSize = new System.Drawing.Size(1279, 658);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.startStop);
             this.Controls.Add(this.moveOnce);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
