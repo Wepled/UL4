@@ -15,8 +15,8 @@ namespace UL4
             _dy = dY;
             
         }
-        private double _startX;
-        private double _startY;
+        public double _startX;
+        public double _startY;
         private double _dx;
         private double _dy;
         public void DrawSpaceShip(Graphics g)

@@ -9,6 +9,7 @@ namespace Ul4_T
 
         private PSController ps = new PSController();
         private Planet plnt = new Planet(50, 10, 1, 40);
+        private SpaceShip ship = new SpaceShip(new Planet(10,10,0.5, 2), 10, 10);
         [TestMethod]
         public void InitPlanets_Test()
         {
@@ -42,6 +43,26 @@ namespace Ul4_T
             Assert.AreEqual(expectedAngular, actualAngular);
             Assert.AreEqual(expectedRadius, actualRadius);
         }
-
+        [TestMethod]
+        public void CreateSpaceShip_Test()
+        {
+            double expectedX = 10;
+            double actualX = ship._startX;
+            double expectedY = 10;
+            double actualY = ship._startY;
+            Assert.AreEqual(expectedX, actualX);
+            Assert.AreEqual(expectedY, actualY);
+        }
+        [TestMethod]
+        public void MoveSpaceShip_Test()
+        {
+            ship.MoveSpaceship();
+            double expectedX = 20;
+            double actualX = ship._startX;
+            double expectedY = 20;
+            double actualY = ship._startY;
+            Assert.AreEqual(expectedX, actualX);
+            Assert.AreEqual(expectedY, actualY);
+        }
     }
 }
