@@ -19,26 +19,18 @@ namespace UL4
         {
             planetsList.Add(new Planet(formMidX, formMidY, 0.0099, 10));
             planetsList.Add(new Planet(formMidX + 50, formMidY, 0.0098, 6));
-            planetsList.Add(new Planet(formMidX + 100, formMidY, 0.0006, 10));
-            planetsList.Add(new Planet(formMidX + 150, formMidY, 0.0005, 15));
-            planetsList.Add(new Planet(formMidX + 200, formMidY, 0.0006, 8));
-            planetsList.Add(new Planet(formMidX + 250, formMidY, 0.0005, 9));
+            planetsList.Add(new Planet(formMidX + 100, formMidY, 0.006, 10));
+            planetsList.Add(new Planet(formMidX + 150, formMidY, 0.005, 15));
+            planetsList.Add(new Planet(formMidX + 200, formMidY, 0.006, 8));
+            planetsList.Add(new Planet(formMidX + 250, formMidY, 0.005, 9));
             SpaceShips.Add(new SpaceShip(planetsList[0], 2, 1));
             SpaceShips.Add(new SpaceShip(planetsList[1], 2, 3));
             SpaceShips.Add(new SpaceShip(planetsList[2], 0.5, 3));
         }
         public void Move()
         {
-            foreach(Planet p in planetsList)
-            {
-                p.rotate(_centralPoint, p._angularVelocity);
-                Console.WriteLine("X:{0} Y:{1}", p.GetX(), p.GetY());
-            }
-            foreach (SpaceShip p in SpaceShips)
-            {
-                p.MoveSpaceship();
-                Console.WriteLine("X:{0} Y:{1}", p.GetX(), p.GetY());
-            }
+            planetsList.ForEach(x=>x.rotate(_centralPoint, x._angularVelocity));
+            SpaceShips.ForEach(x=>x.MoveSpaceship());
         }
     }
 }

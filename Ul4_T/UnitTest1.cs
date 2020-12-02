@@ -7,14 +7,14 @@ namespace Ul4_T
     public class PSSysT
     {
 
-        private PSController ps = new PSController();
+        private PSController ps = new PSController(0, 0);
         private Planet plnt = new Planet(50, 10, 1, 40);
         private SpaceShip ship = new SpaceShip(new Planet(10,10,0.5, 2), 10, 10);
         [TestMethod]
         public void InitPlanets_Test()
         {
             double expected = ps.planetsList[2].GetX();
-            double actual = 700;
+            double actual = 100;
             Assert.AreEqual(expected, actual);
         }
 
@@ -22,7 +22,7 @@ namespace Ul4_T
 
         public void MovePlanets_Test()
         {
-            double expected = 649;
+            double expected = 49;
             double actual = ps.planetsList[1].GetX();
             Assert.AreEqual(expected, actual, 1);
         }

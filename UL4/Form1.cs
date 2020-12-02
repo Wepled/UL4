@@ -17,32 +17,27 @@ namespace UL4
             InitializeComponent();
             startStop.Text = "Start";
             planetSystem = new PSController((double) this.Width / 3, (double) this.Height / 2);
-
         }
 
         PSController planetSystem;
         Graphics graphics;
 
-        private void DrawPlanetsSYS(PSController PS)
+        private void DrawSYS(PSController PS)
         {
-
             PS.planetsList.ForEach(x => x.Draw(CreateGraphics()));
             PS.SpaceShips.ForEach(x => x.DrawSpaceShip(CreateGraphics()));
-
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            DrawPlanetsSYS(planetSystem);
+            DrawSYS(planetSystem);
         }
-
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             planetSystem.Move();
             this.Refresh();
-            DrawPlanetsSYS(planetSystem);
+            DrawSYS(planetSystem);
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -55,10 +50,8 @@ namespace UL4
             timer1.Start();
             planetSystem.Move();
             this.Refresh();
-            DrawPlanetsSYS(planetSystem);
-
+            DrawSYS(planetSystem);
             timer1.Stop();
-
         }
 
         private void startStop_Click(object sender, EventArgs e)
@@ -66,10 +59,12 @@ namespace UL4
             if (!timer1.Enabled)
             {
                 timer1.Start();
+                startStop.Text = "Stop";
             }
             else
             {
                 timer1.Stop();
+                startStop.Text = "Start";
             }
 
         }

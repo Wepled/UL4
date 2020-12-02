@@ -32,7 +32,6 @@ namespace UL4
         {
           _startX += _dx;
           _startY += _dy;
-           
         }
     }
 }
